@@ -1,0 +1,10 @@
+{% extends 'inc/nav.html' %} 
+{% block title %}Demo-Student form {% endblock title %} 
+{% block content %}
+<h1>Student Edit Form</h1>
+<form action="" method="POST">
+  {% csrf_token %} 
+  {{form.as_p}}
+  <button type="submit" class="btn btn-success">EDIT</button>
+</form>
+{% endblock content %}

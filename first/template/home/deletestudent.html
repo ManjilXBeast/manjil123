@@ -1,0 +1,12 @@
+{% extends 'inc/nav.html' %} 
+{% block title %}Demo-Student form {% endblock title %} 
+{% block content %}
+<h1>Student Delete Page</h1>
+<p> Are you sure you wanna delete the Student: {{student.name}}?
+<form action="" method="POST">
+  {% csrf_token %} 
+  {{form.as_p}}
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+<a href="{% url 'student' %}" class="btn btn-primary">Cancel</a>
+{% endblock content %}

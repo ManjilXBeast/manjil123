@@ -1,0 +1,13 @@
+{% extends 'inc/nav.html' %}
+
+{% block title %}Demo-Book Page{% endblock title %}
+
+{% block content %}
+<h1>Book Create Form</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">SAVE</button>
+ </form>
+
+{% endblock content %}
